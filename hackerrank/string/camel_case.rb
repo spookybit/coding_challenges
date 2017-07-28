@@ -1,4 +1,4 @@
-https://www.hackerrank.com/challenges/camelcase
+#https://www.hackerrank.com/challenges/camelcase
 
 def numWords(s)
     caps = ("A".."Z").to_a
