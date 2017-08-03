@@ -30,3 +30,16 @@ def largest_contiguous_sum(arr)
   end
 
 end
+
+def silly_years(yr)
+  arr = []
+  until arr.length == 10
+    yr += 1
+    ab = yr/100
+    cd = yr%100
+    bc = (yr/10)%100
+
+    arr.push(yr) if ab + cd == bc
+  end
+  arr
+end
