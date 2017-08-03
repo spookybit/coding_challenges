@@ -9,3 +9,30 @@ def matrix_region_sum(matrix, top_left, bottom_right)
 
   total
 end
+
+def merge_sort(arr)
+  return arr if arr.length <= 1
+
+  midd = arr.length/2
+  left = arr.take(midd)
+  right = arr.drop(midd)
+
+  sort_left = merge_sort(left)
+  sort_right = merge_sort(right)
+
+  merge(sort_left, sort_right)
+end
+
+def merge(left, right)
+  merged = []
+
+  until left.empty? || right.empty?
+    if left.first < right.first
+      merged << left.shift
+    else
+      merged << right.shift
+    end
+  end
+
+  merged + left + right
+end
