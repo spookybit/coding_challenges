@@ -43,3 +43,20 @@ def silly_years(yr)
   end
   arr
 end
+
+def pair_sum(arr, target)
+  checked = Set.new
+  pairs = Set.new
+
+  arr.each do |num|
+    other = target - num
+
+    if checked.include?(other)
+      pairs.add([[other, num].min, [other, num].max])
+    end
+
+    checked.add(num)
+  end
+
+  pairs
+end
