@@ -25,7 +25,7 @@ def common_subsets(arr1, arr2)
   subsets(fast_intersection(arr1, arr2))
 end
 
-def can_win?(arr, idx)
+def can_find_zero?(arr, idx)
   to_visit = [idx]
   visited = Array.new(arr.length, false)
   visited[idx] = true
