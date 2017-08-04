@@ -20,3 +20,7 @@ def fast_intersection(arr1, arr2)
 
   intersections
 end
+
+def common_subsets(arr1, arr2)
+  subsets(fast_intersection(arr1, arr2))
+end
