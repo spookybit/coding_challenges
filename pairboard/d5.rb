@@ -36,3 +36,18 @@ def merge(left, right)
 
   merged + left + right
 end
+
+def binary_search(arr, target)
+  return nil if arr.empty?
+
+  midd = arr.length/2
+
+  if arr[midd] == target
+    return midd
+  elsif arr[midd] < target
+    binary_search(arr[0...midd], target)
+  else
+    res = binary_search(arr[midd+1..-1], target)
+    res.nil? ? nil : midd + 1 + res
+  end
+end
