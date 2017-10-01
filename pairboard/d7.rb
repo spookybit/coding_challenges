@@ -28,3 +28,25 @@ def weighted_random_index(arr)
     return idx if count > goal
   end
 end
+
+# Given an array, move all zeros to the end. The order of non-zero elements does not matter.
+# move_zeros([1, 2, 0, 3, 4, 0, 5, 6, 0]) == [1, 2, 6, 3, 4, 5, 0, 0, 0]
+# Algorithm should be O(n); use O(1) extra space.
+
+def move_zeros(arr)
+  idx = 0
+  num_zeros = 0
+
+  while idx < arr.length - num_zeros
+    if arr[idx] != 0
+      idx += 1
+      next
+    end
+
+    back = arr.length - 1 - num_zeros
+    arr[idx], arr[back] = arr[back], arr[idx]
+    num_zeros += 1
+  end
+
+  arr
+end
