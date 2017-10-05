@@ -10,22 +10,36 @@ end
 #
 # Next, relax the assumption that the first two strings contain no overlap. Analyze the time-complexity of your solution. You may wish to view this problem recursively.
 
+# def is_shuffle?(str1, str2, str3)
+#   i = 0
+#   j = 0
+#   str3.each_char do |letter|
+#     if i < str1.length && letter == str1[i]
+#       i += 1
+#     elsif j < str2.length && letter == str2[j]
+#       j += 1
+#     else
+#       return false
+#     end
+#   end
+#
+#   if (i == str1.length) && (j == str2.length)
+#     return true
+#   else
+#     return false
+#   end
+# end
+
 def is_shuffle?(str1, str2, str3)
-  i = 0
-  j = 0
-  str3.each_char do |letter|
-    if i < str1.length && letter == str1[i]
-      i += 1
-    elsif j < str2.length && letter == str2[j]
-      j += 1
-    else
-      return false
-    end
+  return str1.empty? && str2.empty? if str3.empty?
+
+  if str1[0] == str3[0]
+    return true if is_shuffle?(str1[1..-1], str2, str3[1..-1])
   end
 
-  if (i == str1.length) && (j == str2.length)
-    return true
-  else
-    return false
+  if str2[0] == str3[0]
+    return true if is_shuffle?(str1, str2[1..-1], str3[1..-1])
   end
+
+  false
 end
