@@ -5,7 +5,7 @@ def rand5
 end
 
 def rand7
-  while true  
+  while true
     num = 5 * rand5 + rand5
     return (num % 7) if num  < 21
   end
