@@ -11,7 +11,4 @@ function LongestWord(sen) {
 
   return arr.shift();
 
-  // code goes here
-  return sen;
-
 }
