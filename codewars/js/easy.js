@@ -72,3 +72,24 @@ function isTriangle(a,b,c)
   if (arr[0] + arr[1] > arr[2]) {return true}
   else {return false}
 }
+
+// Write a method, digital_root(num). It should sum the digits of a positive
+// integer. If it is greater than or equal to 10, sum the digits of the
+// resulting number. Keep repeating until there is only one digit in the result,
+// called the "digital root". Do not use string conversion within your method.
+
+function digitalRoot(num) {
+  while (num >= 10) {
+    addDigits(num)
+  }
+  return num;
+}
+
+function addDigits(num) {
+  let total = 0;
+  while (num >= 10) {
+    total += num % 10;
+    num = num/10;
+  }
+  return total;
+}
