@@ -48,7 +48,6 @@ end
 # Bonus: solve it in O(m * n) using O(m * n) extra space. (Hint: the solution
 #  involves dynamic programming which will be introduced later in the course.)
 
-def longest_common_substring(str1, str2)
   def make_matrix(str1, str2)
   matrix = Array.new(str1.length + 1) { Array.new(str2.length + 1, 0) }
 
@@ -78,6 +77,7 @@ def longest_common_substring(str1, str2)
 
   greatest_substring
 end
+
 # In this implementation, we solve the problem in a bottom up manner. We start off by creating an n x m matrix using our make_matrix helper function. This matrix will hold the length of the longest common substring at each of the first string and second string.
 #
 # We then iterate through each of the strings in a nested loop and compare each of the characters. If the characters are different, our common substring length that position is 0, so we add a 0 into the matrix at matrix[idx1 + 1][idx2 + 1]. Otherwise, we look to the value at matrix[idx1][idx2] (the previous positions in each of the strings) and increment it by one.
