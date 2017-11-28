@@ -1,10 +1,10 @@
 // create a search feature that zigzags down a binary tree and prints out the value
 
-function node(value, parent, leftChild, rightChild) {
-  value: value,
-  parent: parent,
-  leftChild: leftChild,
-  rightChild: rightChild
+function Node(value, parent, leftChild, rightChild) {
+  this.value: value,
+  this.parent: parent,
+  this.leftChild: leftChild,
+  this.rightChild: rightChild
 }
 
 function zigzag(node) {
