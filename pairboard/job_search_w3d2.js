@@ -17,5 +17,5 @@ shuffle(deck)
 // {}.object_id/100 % 52 gives random number
 
 function promiseDotAll(arr) {
-  
+  // some sort of setInterval or while loop, lol
 }
