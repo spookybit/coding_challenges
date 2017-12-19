@@ -1,3 +1,5 @@
+//substring count of all palindromes
+
 function palindrome(s) {
   let hashMap = {};
   let counter = 0;
@@ -20,4 +22,21 @@ function palindrome(s) {
 function isPalindrome(s) {
     let reverse = s.split("").reverse().join("")
     return s === reverse ? true : false
+}
+
+//first occurence index of substring
+
+function firstOccurrence(s, x) {
+    for (let i = 0; i < s.length; i++) {
+        let counter = i;
+        let j = 0;
+        while (s[counter] === x[j] || x[j] === '*') {
+            counter += 1;
+            j += 1;
+            if (j === x.length - 1) {
+                return i
+            }
+        }
+    }
+    return false
 }
