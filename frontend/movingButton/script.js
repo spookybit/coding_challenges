@@ -6,7 +6,7 @@ function moveButton(e) {
   setTimeout(function() {
     // 'this' refers to Window object in here because it is a different scope
     // button.classList.toggle('moveButton');
-    thisButton.classList.toggle('moveButton');
+    thisButton.classList.remove('moveButton');
   }, 2000);
 }
 

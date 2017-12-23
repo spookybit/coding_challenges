@@ -17,4 +17,6 @@
   20% {background-color: red; left: 300px; top: 0px;}
   50% {background-color: blue; left: 300px; top: 200px;}
   70% {background-color: orange; left: 0px; top: 200px;}
+  from {transform: rotate(0deg);}
+  to {transform: rotate(1080deg);}
 }
