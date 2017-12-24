@@ -32,6 +32,10 @@ img {
   background-color: red;
 }*/
 
+.like {
+  background-color: red;
+}
+
 .likeBox{
     background:#F8F8F8;
     border: 5px solid #DFDFDF;
@@ -40,14 +44,19 @@ img {
     height: 30px;
     letter-spacing: 1px;
     line-height: 30px;
-    position: relative;
+    position: absolute;
     text-align: center;
     text-transform: uppercase;
-    top: -80px;
-    left:-30px;
+    top: -40px;
+    left: 0px;
     display:none;
     padding:0 20px;
+    z-index: 10;
 
+}
+
+.like {
+  position: relative;
 }
 
 .like:hover .likeBox {
