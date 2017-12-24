@@ -26,41 +26,35 @@ img {
   font-size: 14px;
 }
 
-/*.likeBox {
-  display: none;
-  height: 50px;
-  background-color: red;
-}*/
-
-.like {
-  background-color: red;
-}
-
 .likeBox{
     background:#F8F8F8;
     border: 5px solid #DFDFDF;
     color: #717171;
     font-size: 13px;
     height: 30px;
-    letter-spacing: 1px;
     line-height: 30px;
     position: absolute;
-    text-align: center;
-    text-transform: uppercase;
     top: -40px;
     left: 0px;
-    display:none;
+    display: none;
+    visibility: hidden;
     padding:0 20px;
-    z-index: 10;
-
+    /*transition-property: visibility;*/
+    /*transition-delay: 2s;*/
 }
 
-.like {
+.likeMain {
   position: relative;
 }
 
-.like:hover .likeBox {
-  display: block;
+.likeMain:after {
+  /*content: attr(data-status);*/
+}
+
+.likeMain:hover .likeBox {
+  display: flex;
+  flex-direction: row;
+  visibility: visible;
 }
 
 .reactions {
