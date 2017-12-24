@@ -1,0 +1,63 @@
+body {
+  background-color: #E9EBEE;
+}
+
+.post {
+  background-color: #FFFFFF;
+}
+
+.header {
+  display: flex;
+}
+
+.trimImg {
+  max-width: 40px;
+  max-height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+img {
+  max-width: 40px;
+}
+
+.name {
+  color: #365899;
+  font-size: 14px;
+}
+
+/*.likeBox {
+  display: none;
+  height: 50px;
+  background-color: red;
+}*/
+
+.likeBox{
+    background:#F8F8F8;
+    border: 5px solid #DFDFDF;
+    color: #717171;
+    font-size: 13px;
+    height: 30px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: -80px;
+    left:-30px;
+    display:none;
+    padding:0 20px;
+
+}
+
+.like:hover .likeBox {
+  display: block;
+}
+
+.reactions {
+  display: flex;
+}
+
+.reactions div {
+  margin-left: 3px;
+}
