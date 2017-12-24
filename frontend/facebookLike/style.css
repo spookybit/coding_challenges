@@ -1,13 +1,18 @@
 body {
   background-color: #E9EBEE;
+  font-family: "Lucida Grande";
 }
 
 .post {
   background-color: #FFFFFF;
+  max-width: 500px;
+  overflow: auto;
+  /*overflow needed to be set or else the .header margin would push the whole .post down and not expand .post*/
 }
 
 .header {
   display: flex;
+  margin: 8px;
 }
 
 .trimImg {
@@ -24,6 +29,10 @@ img {
 .name {
   color: #365899;
   font-size: 14px;
+}
+
+p:first-of-type {
+  margin: 13px;
 }
 
 .likeBox{
@@ -45,6 +54,8 @@ img {
 
 .likeMain {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .likeMain:after {
@@ -59,6 +70,8 @@ img {
 
 .reactions {
   display: flex;
+  align-items: center;
+  margin-left: 5px;
 }
 
 .reactions div {
