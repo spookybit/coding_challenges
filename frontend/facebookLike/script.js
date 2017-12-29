@@ -1,6 +1,6 @@
 let likeMain = document.querySelector('.likeMain');
-let buttons = document.querySelectorAll('[data-button="button"]');
- // currentLike = document.querySelector('.currentLike');
+// let buttons = document.querySelectorAll('[data-button="button"]');
+let buttons = document,querySelector('.likeBox');
 
 function like() {
   let url = this.dataset.status;
@@ -14,6 +14,6 @@ function like() {
   // likeMain.setAttribute('data-status', '<img src="./assets/profile.png" />');
 }
 
-buttons.forEach(function(button) {
-  button.addEventListener('click', like)
-})
+// buttons.forEach(function(button) {
+//   button.addEventListener('click', like)
+// })
