@@ -124,6 +124,7 @@ function findEvenIndex(arr)
 // let song = 'SOMEWUBWUBWUBSTUFF' === 'SOME STUFF'
 function songDecoder(song){
   let res = song.replace(/WUB/g, " ").trim().replace(/ +/g, " ");
+  // let res = song.replace(/(WUB)+/g, " ").trim()
 
 
   return res;
