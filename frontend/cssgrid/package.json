@@ -5,12 +5,17 @@
   "main": "index.js",
   "scripts": {
     "build-css": "./bin/build-css",
-    "watch-css": "./bin/watch-css"
+    "watch-css": "./bin/watch-css",
+    "start:dev": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.7.2",
-    "nodemon": "^1.14.7"
+    "nodemon": "^1.14.7",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "webpack": "^3.10.0"
   }
 }
