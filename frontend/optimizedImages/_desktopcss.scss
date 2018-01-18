@@ -1,0 +1,13 @@
+$col: blue;
+
+@media (min-width: 480px) {
+  body{
+    font-size: 1em;
+    background-color: $col;
+    color: $col;
+  }
+}
+
+@mixin borderz($radius) {
+  border-radius: $radius;
+}

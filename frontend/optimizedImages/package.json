@@ -4,13 +4,15 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "build-sass": "node-sass --include-path scss main.scss main.css",
+    "build-css": "node-sass --include-path scss main.scss main.css",
+    "watch-css": "nodemon -e scss -x 'npm run build-css'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^4.7.2",
+    "nodemon": "^1.14.10",
     "webpack": "^3.10.0"
   }
 }

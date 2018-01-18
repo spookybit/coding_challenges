@@ -1,5 +1,13 @@
-$backgroundcolor: #3bbfce;
+@import './style.css';
+@import 'desktopcss';
 
-body{
-  background-color: $backgroundcolor;
+$backgroundcolor: #3bbfce;
+@media (max-width: 480px) {
+  body {
+    background-color: red;
+  }
+
+  p {
+    @include borderz(10px);
+  }
 }
