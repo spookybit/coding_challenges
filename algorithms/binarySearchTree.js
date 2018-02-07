@@ -1,9 +1,3 @@
-// function Node(val) {
-//   this.value = val;
-//   this.right = null;
-//   this.left = null;
-// }
-
 function Node(val) {
   this.value = val;
   this.right = null;
