@@ -66,7 +66,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = "./script.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -78,19 +78,6 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
-
-/***/ }),
-
-/***/ 0:
-/*!*******************************!*\
-  !*** multi ./script.js watch ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! ./script.js */"./script.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module \"watch\""); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 /***/ })
