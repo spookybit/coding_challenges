@@ -1,22 +1,80 @@
+@import url(./reset.css);
+.flightOnlyOption {
+  position: relative;
+  padding-left: 16px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.flightOnlyOption input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer; }
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  border-radius: 50%; }
+
+.flightOnlyOption input:checked ~ .checkmark {
+  background-color: #2196F3; }
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+.flightOnlyOption input:checked ~ .checkmark:after {
+  display: block; }
+
+.flightOnlyOption .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white; }
+
 body {
-  min-width: 100%; }
+  min-width: 100vw;
+  background-color: #EDEDED; }
 
 .container {
-  width: 100%;
   display: grid;
-  grid-gap: 20px;
-  grid-template: "a a a a" 100px "b b b b" 200px "c c c c" 200px;
-  grid-auto-rows: 1fr 1fr 1fr 1fr;
-  grid-auto-columns: 100px; }
+  grid-template: "a a a a" auto "b b b b" auto "c c c c" auto "d d d d" auto "f f f f" auto / 1fr 1fr 1fr 1fr; }
 
 .tenPercent {
   grid-column: 1/-1;
-  grid-row: 1; }
+  grid-row: 1;
+  background-color: #F8CC45;
+  text-align: center; }
 
 .heading {
   grid-column: 1/-1;
-  grid-row: 2; }
+  grid-row: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
 
 .search {
   grid-column: 1/-1;
-  grid-row: 3/span 3; }
+  grid-row: 3;
+  background-image: url("./assets/searchBackground.png");
+  background-size: 100vw;
+  min-height: 80vh; }
+
+.flights {
+  grid-column: 1/-1;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px; }
+
+.flightItem {
+  background-color: white; }
