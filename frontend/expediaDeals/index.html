@@ -18,10 +18,12 @@
     <div class='search'>
       Today's Amazing Flight Deals
       <div class='options'>
-        <div>Hotel only</div>
-        <div>Flight only</div>
-        <div>Flight + Hotel</div>
-        <div class='flightOnly'>
+        <div class='flightAndHotelOptions'>
+          <div>Hotel only</div>
+          <div>Flight only</div>
+          <div>Flight + Hotel</div>
+        </div>
+        <div class='flightOnly flightAndHotelInputs'>
           <label class='flightOnlyOption'>Roundtrip
             <input type='radio' check='checked' name='radio' />
             <span class='checkmark'></span>
@@ -34,7 +36,7 @@
             <input type='radio' name='radio' />
             <span class='checkmark'></span>
           </label>
-          <div class='roundtrip'>
+          <div class='roundtrip flightAndHotel'>
             <label class='tripInputs leavingFrom'>Leaving from
               <input type='text' placeholder='City or airport'/>
             </label>
@@ -53,9 +55,9 @@
             <label class='tripInputs children'>Children(0-17)
               <input type='text' placeholder='mm/dd/yyyy'/>
             </label>
-            <span>Avanced options</span>
-            <div class='searchSubmit'>Search</div>
           </div>
+          <span>Avanced options</span>
+          <div class='searchSubmit'>Search</div>
         </div>
 
 
