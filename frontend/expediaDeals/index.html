@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <head>
   <title>Expedia Deals CSS Grids Practice</title>
-  <meta charst="utf-8" />
+  <meta charset="utf-8" />
   <link rel="stylesheet" href="main.css"/>
 </head>
 <body>
   <div class='container'>
     <div class='tenPercent'>Expedia+ Get an extra 10% off or more on select hotels with Member Pricing Join now, it's free!</div>
     <div class='heading'>
-      <div>Account</div>
-      <div>My Lists</div>
-      <div>My Trips</div>
-      <div>Support</div>
-      <div>Español</div>
-      <div>简体中文</div>
+      <div class='myAccount'>
+        <div class='dropdown'>Account <i class="arrowdown"></i>
+          <div class='dropdownMenu'>
+            <div>Sign In</div>
+            <div>Create an Account</div>
+          </div>
+        </div>
+        <div>My Lists</div>
+        <div>My Trips</div>
+        <div class='dropdown'>Support <i class="arrowdown"></i>
+          <div class='dropdownMenu'>
+            <div>Customer Support</div>
+            <div>Feedback</div>
+          </div>
+        </div>
+        <div>Español</div>
+        <div>简体中文</div>
+      </div>
+      <div class='navLinks'>
+        <div>Home</div>
+        <div>Bundle and Save</div>
+        <div>Hotels</div>
+        <div>Cars</div>
+        <div>Flights</div>
+        <div>Cruises</div>
+        <div>Things to Do</div>
+        <div>Vacation Rentals</div>
+        <div>Deals</div>
+        <div>Rewards</div>
+        <div>Mobile</div>
+        <div>Collections</div>
+      </div>
     </div>
     <div class='search'>
       Today's Amazing Flight Deals
@@ -32,7 +58,7 @@
             <input type='radio' name='radio' />
             <span class='checkmark'></span>
           </label>
-          <label class='flightOnlyOption'>Multiple Desintations
+          <label class='flightOnlyOption'>Multiple Destinations
             <input type='radio' name='radio' />
             <span class='checkmark'></span>
           </label>
@@ -49,14 +75,16 @@
             <label class='tripInputs returning'>Returning
               <input type='text' placeholder='mm/dd/yyyy'/>
             </label>
-            <label class='tripInputs adults'>Adults(18+)
+          </div>
+          <div class='passengers'>
+            <label class='tripInputs passengerSelect adults'>Adults(18+)
               <input type='text' placeholder='mm/dd/yyyy'/>
             </label>
-            <label class='tripInputs children'>Children(0-17)
+            <label class='tripInputs passengerSelect children'>Children(0-17)
               <input type='text' placeholder='mm/dd/yyyy'/>
             </label>
           </div>
-          <span>Avanced options</span>
+          <div>Avanced options</div>
           <div class='searchSubmit'>Search</div>
         </div>
 

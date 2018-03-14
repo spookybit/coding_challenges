@@ -1,0 +1,66 @@
+.tenPercent{
+  padding-top: .6em;
+  padding-bottom: .3em;
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.arrowdown{
+  border: solid;
+  border-width: 0 0.2em 0.2em 0;
+  display: inline-block;
+  padding: .17em;
+  transform: rotate(45deg);
+}
+
+.heading{
+  color: #00355f;
+  font-size: .8em;
+}
+
+.myAccount{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0 2.5em;
+}
+
+.myAccount div{
+  margin: .5em .5em;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownMenu{
+  position: absolute;
+  display: none;
+  background-color: #00355f;
+  top: 1em;
+  left: -10em;
+  color: white;
+  z-index: 1;
+  width: 14em;
+}
+
+.dropdownMenu div{
+  padding: .5em;
+}
+
+.dropdown:hover .dropdownMenu{
+  display: block;
+}
+
+.navLinks{
+  margin: 1.3em 1.5em 0em 1.5em;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 1.5em;
+  font-size: 1.1em;
+}
+
+.navLinks div{
+  margin: 0em .7em;
+}

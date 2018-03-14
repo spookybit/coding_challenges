@@ -1,8 +1,9 @@
 @import './reset.css';
 @import './searchBox.scss';
+@import './heading.scss';
 
 body {
-  min-width: 100vw;
+  // min-width: 100vw;
   background-color: #EDEDED;
   font-family: Helvetica Neue, Arial, Lucida Grande, sans-serif;
 }
@@ -22,16 +23,14 @@ body {
 .tenPercent {
   grid-column: 1/-1;
   grid-row: 1;
-  background-color: #F8CC45;
+  background-color: rgb(255, 204, 0); //#F8CC45;
   text-align: center;
 }
 
 .heading {
   grid-column: 1/-1;
   grid-row: 2;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  background-color: rgb(255, 204, 0); //#F8CC45;
 }
 
 .search {
