@@ -182,6 +182,10 @@
 .navLinks div {
   margin: 0em .7em; }
 
+.flightItem {
+  display: flex;
+  flex-direction: column; }
+
 body {
   background-color: #EDEDED;
   font-family: Helvetica Neue, Arial, Lucida Grande, sans-serif; }
