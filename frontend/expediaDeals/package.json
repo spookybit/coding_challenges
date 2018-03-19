@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
-    "build-css": "node-sass --include-path scss main.scss main.css",
+    "build-css": "node-sass --include-path scss style/main.scss style/main.css",
     "watch-css": "nodemon -e scss -x 'npm run build-css'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
