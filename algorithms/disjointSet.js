@@ -23,7 +23,8 @@ class DisjointSet {
   }
 
   unionize(vertexA, vertexB){
-    this.graph[vertexA] = vertexB;
+    let parentA = this.findParent(vertexA);
+    this.graph[parentA] = vertexB;
   }
 
   isCyclic(){
