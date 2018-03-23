@@ -45,3 +45,44 @@ function longestUniqueSubstring(str){
   }
   return maxLength;
 }
+
+// There are two sorted arrays nums1 and nums2 of size m and n respectively.
+//
+// Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+// Example 1:
+//
+// nums1 = [1, 3]
+// nums2 = [2]
+//
+// The median is 2.0
+//
+// Example 2:
+//
+// nums1 = [1, 2]
+// nums2 = [3, 4]
+//
+// The median is (2 + 3)/2 = 2.5
+
+
+function medianOfSortedArrs(arr1, arr2) {
+  let len = (arr1.length + arr2.length)/2;
+  if (Number.isInteger(len)){
+    len = len + 1
+  } else {
+    len = Math.ceil(len);
+  }
+  let mergedArr = [];
+
+  while (mergedArr.length < len){
+    if(arr1[0] > arr2[0] || arr1.length === 0){
+      mergedArr.push(arr2.shift());
+    } else {
+      mergedArr.push(arr1.shift());
+    }
+  }
+  if (len%2 === 0) {
+    return (mergedArr[len-1] + mergedArr[len-2])/2;
+  } else {
+    return mergedArr.pop();
+  }
+}
