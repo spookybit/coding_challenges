@@ -1,6 +1,10 @@
 // given a list of items, return all unique possible combinations of items
 
 function uniqueOrders(arr, size){
+  if (size <= 0 || arr.length < size) {
+    return [];
+  }
+
   if (arr.length == size) {
     return [arr];
   }
