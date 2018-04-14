@@ -66,19 +66,29 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./script.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./script/script.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./script.js":
-/*!*******************!*\
-  !*** ./script.js ***!
-  \*******************/
+/***/ "./script/script.js":
+/*!**************************!*\
+  !*** ./script/script.js ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+const flightItems = document.querySelectorAll('.flightItem');
 
+flightItems.forEach(function(item){
+  let newEl = document.createElement('div');
+  let newElText = document.createElement('span');
+  newElText.innerHTML = 'ROUNDTRIP FROM';
+  newEl.appendChild(newElText);
+  newEl.className = 'tripDescription';
+  let priceEl = item.querySelector('.price');
+  item.insertBefore(newEl, priceEl);
+})
 
 /***/ })
 
