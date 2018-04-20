@@ -40,8 +40,10 @@ function catchRainWater(arr) {
     rightMaxHeights.push(rightPeak)
   }
 
+  rightMaxHeights = rightMaxHeights.reverse();
+
   for (let i = 0, len = arr.length; i < len; i++) {
-    collectedWater += Math.min(leftMaxHeights, rightMaxHeights) - arr[i]
+    collectedWater += Math.min(leftMaxHeights[i], rightMaxHeights[i]) - arr[i]
   }
 
   return collectedWater;
