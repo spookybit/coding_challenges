@@ -5,12 +5,13 @@ function removeDuplicates(arr){
   let uniqueIndex = 1;
 
   for (let i = 1, len = arr.length; i < len; i++) {
-    if (arr[i] <= lastVisitedNum) {
-      arr[i] = null;
-    } else if (arr[i] !== lastVisitedNum) {
+    if (arr[i] !== lastVisitedNum) {
       lastVisitedNum = arr[i];
       arr[uniqueIndex] = lastVisitedNum;
       uniqueIndex += 1;
+    } else if (i !== uniqueIndex) {
+      arr[i] = null;
+
     }
   }
 
