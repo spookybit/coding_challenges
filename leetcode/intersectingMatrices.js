@@ -32,9 +32,13 @@ function overlapMatrices(matrix1, matrix2) {
     }
   }
 
-  let shortMap = matrix1Map.length <= matrix2Map.length ? matrix1Map : matrix2Map;
+  let shortMap = Object.keys(matrix1Map).length <= Object.keys(matrix2Map).length ? matrix1Map : matrix2Map;
 
-  let longMap = matrix1Map.length > matrix2Map.length ? matrix1Map : matrix2Map
+  let longMap = Object.keys(matrix1Map).length > Object.keys(matrix2Map).length ? matrix1Map : matrix2Map
+
+  if (Object.keys(shortMap).length === 0) {
+    return 0;
+  }
 
   let matches = 0;
   for (let i = -matrix1.length, len = matrix1.length; i < len; i++) {
@@ -43,7 +47,6 @@ function overlapMatrices(matrix1, matrix2) {
         pos = pos.split(',');
         pos = [(parseInt(pos[0])+i).toString(), (parseInt(pos[1])+j).toString()];
         if (longMap[pos]) {
-          console.log(pos);
           matches += 1;
         }
       })
