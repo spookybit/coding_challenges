@@ -8,4 +8,11 @@ flightItems.forEach(function(item){
   newEl.className = 'tripDescription';
   let priceEl = item.querySelector('.price');
   item.insertBefore(newEl, priceEl);
+
+  let newEl2 = document.createElement('div');
+  let newElText2 = document.createElement('span');
+  newElText2.innerHTML = 'per person';
+  newEl2.appendChild(newElText2);
+  newEl2.className = 'pricePerPerson';
+  item.insertBefore(newEl2, priceEl.nextSibling);
 })
