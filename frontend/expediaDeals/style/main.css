@@ -95,7 +95,8 @@
   border-radius: 4%;
   padding: .45em;
   background-color: white;
-  font-size: 1.1em; }
+  font-size: 1.1em;
+  width: 90%; }
 
 .passengers {
   display: flex;
@@ -113,6 +114,7 @@
   color: #2665B2; }
 
 .flightAndHotel {
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr; }

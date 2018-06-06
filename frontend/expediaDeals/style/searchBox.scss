@@ -103,6 +103,7 @@
   flex-direction: column;
   max-width: 90%;
   margin-top: 2em;
+  // padding-left: .5rem;
 }
 
 .tripInputs input{
@@ -112,6 +113,7 @@
   padding: .45em;
   background-color: white;
   font-size: 1.1em;
+  width: 90%;
 }
 
 .passengers{
@@ -134,6 +136,7 @@
 }
 
 .flightAndHotel{
+  max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
